@@ -1,0 +1,16 @@
+    Battery         Efficiency     Fast_charge     Price.DE.     
+ Min.   : 21.30   Min.   :137.0   Min.   : 170   Min.   : 22550  
+ 1st Qu.: 57.50   1st Qu.:171.0   1st Qu.: 360   1st Qu.: 45690  
+ Median : 71.00   Median :188.0   Median : 520   Median : 56942  
+ Mean   : 71.19   Mean   :195.2   Mean   : 553   Mean   : 67264  
+ 3rd Qu.: 85.00   3rd Qu.:208.2   3rd Qu.: 680   3rd Qu.: 73100  
+ Max.   :123.00   Max.   :295.0   Max.   :1290   Max.   :218000  
+                                  NA's   :2      NA's   :51      
+     Range         Top_speed     acceleration..0.100.
+ Min.   :135.0   Min.   :125.0   Min.   : 2.100      
+ 1st Qu.:295.0   1st Qu.:155.8   1st Qu.: 4.900      
+ Median :380.0   Median :180.0   Median : 6.750      
+ Mean   :369.7   Mean   :180.9   Mean   : 7.289      
+ 3rd Qu.:446.2   3rd Qu.:200.0   3rd Qu.: 9.000      
+ Max.   :685.0   Max.   :320.0   Max.   :19.100      
+                                                     

@@ -1,0 +1,24 @@
+
+Call:
+lm(formula = Price.DE. ~ ., data = carsnorange)
+
+Residuals:
+   Min     1Q Median     3Q    Max 
+-53627 -11716   -143   8242  84828 
+
+Coefficients:
+                        Estimate  Std. Error t value             Pr(>|t|)    
+(Intercept)          -158634.947   14227.588 -11.150 < 0.0000000000000002 ***
+Battery                  267.626      87.583   3.056              0.00245 ** 
+Efficiency               291.038      45.659   6.374        0.00000000069 ***
+Fast_charge               18.097       7.589   2.384              0.01772 *  
+Top_speed                700.965      70.710   9.913 < 0.0000000000000002 ***
+acceleration..0.100.    1780.757     760.505   2.342              0.01986 *  
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 18490 on 301 degrees of freedom
+  (53 observations deleted due to missingness)
+Multiple R-squared:  0.7167,	Adjusted R-squared:  0.712 
+F-statistic: 152.3 on 5 and 301 DF,  p-value: < 0.00000000000000022
+

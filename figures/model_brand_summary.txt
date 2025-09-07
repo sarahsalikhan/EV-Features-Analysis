@@ -1,0 +1,64 @@
+
+Call:
+lm(formula = Price.DE. ~ Brand, data = cars)
+
+Residuals:
+   Min     1Q Median     3Q    Max 
+-57600 -11654  -1440   9800  92880 
+
+Coefficients:
+                Estimate Std. Error t value        Pr(>|t|)    
+(Intercept)      39490.0    15803.9   2.499        0.013074 *  
+BrandAiways       4085.5    22350.1   0.183        0.855099    
+BrandAudi        39770.7    16895.1   2.354        0.019310 *  
+BrandBMW         49430.0    16824.6   2.938        0.003597 ** 
+BrandBYD          8859.5    17669.3   0.501        0.616505    
+BrandCitroen      7901.3    16824.6   0.470        0.639008    
+BrandCUPRA        2700.0    20402.8   0.132        0.894821    
+BrandDacia      -15940.0    22350.1  -0.713        0.476357    
+BrandDS           1050.0    27373.2   0.038        0.969431    
+Brande.Go       -14500.0    27373.2  -0.530        0.596756    
+BrandElaris      13600.0    27373.2   0.497        0.619720    
+BrandFiat         5600.0    17312.3   0.323        0.746597    
+BrandFisker      20125.0    19355.8   1.040        0.299415    
+BrandFord        24885.0    19355.8   1.286        0.199692    
+BrandGenesis     28710.0    19355.8   1.483        0.139198    
+BrandHonda        4255.0    22350.1   0.190        0.849159    
+BrandHyundai      8358.0    17312.3   0.483        0.629656    
+BrandJaguar      52910.0    27373.2   1.933        0.054320 .  
+BrandJeep        -2490.0    27373.2  -0.091        0.927590    
+BrandKia         21837.8    17471.9   1.250        0.212454    
+BrandLexus       28510.0    27373.2   1.042        0.298586    
+BrandLotus       84000.0    22350.1   3.758        0.000211 ***
+BrandLucid      127110.0    18699.5   6.798 0.0000000000711 ***
+BrandMaxus       29500.0    27373.2   1.078        0.282157    
+BrandMazda       -3500.0    27373.2  -0.128        0.898356    
+BrandMercedes    47883.6    16225.4   2.951        0.003452 ** 
+BrandMG           1700.0    17312.3   0.098        0.921852    
+BrandMini        -3190.0    22350.1  -0.143        0.886614    
+BrandNIO         35470.0    17312.3   2.049        0.041471 *  
+BrandNissan      11145.7    17920.0   0.622        0.534499    
+BrandOpel        11897.3    16824.6   0.707        0.480108    
+BrandORA          4833.3    20402.8   0.237        0.812922    
+BrandPeugeot      9817.7    16824.6   0.584        0.560035    
+BrandPolestar    29360.0    18248.8   1.609        0.108844    
+BrandPorsche     96641.1    16658.8   5.801 0.0000000188563 ***
+BrandRenault       164.3    17920.0   0.009        0.992692    
+BrandSkoda       13817.1    17920.0   0.771        0.441371    
+BrandSmart        5500.0    18248.8   0.301        0.763356    
+BrandSsangYong    1000.0    27373.2   0.037        0.970886    
+BrandSubaru      18000.0    27373.2   0.658        0.511385    
+BrandTesla       34823.8    17312.3   2.012        0.045292 *  
+BrandToyota      12634.2    18248.8   0.692        0.489342    
+BrandVinFast     27733.3    20402.8   1.359        0.175218    
+BrandVolkswagen  10863.6    17312.3   0.628        0.530872    
+BrandVolvo       21134.5    17180.7   1.230        0.219746    
+BrandZeekr       18580.0    18699.5   0.994        0.321325    
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 22350 on 263 degrees of freedom
+  (51 observations deleted due to missingness)
+Multiple R-squared:  0.6418,	Adjusted R-squared:  0.5805 
+F-statistic: 10.47 on 45 and 263 DF,  p-value: < 0.00000000000000022
+
