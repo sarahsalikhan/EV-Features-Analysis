@@ -6,7 +6,7 @@ Analysis of electric vehicle (EV) specifications and pricing in Germany using R.
 
 
 
-#### Data Analysis on Electric Vehicle Specifications and Prices
+## Data Analysis on Electric Vehicle Specifications and Prices
 
 
 
@@ -18,7 +18,7 @@ This repository contains code and analysis for our \*\*ISM6423 Data Analytics \&
 
 
 
-#### 📌 Research Question
+## 📌 Research Question
 
 \*\*Which specifications for electric vehicles influence their price in Euros in Germany, what is the size of their effects, and how statistically significant is each?\*\*
 
@@ -28,7 +28,7 @@ This repository contains code and analysis for our \*\*ISM6423 Data Analytics \&
 
 
 
-#### 📂 Project Structure
+## 📂 Project Structure
 
 ├─ data/
 │ └─ EV_cars.csv # Dataset (must be placed here)
@@ -67,7 +67,7 @@ renv::restore()   # installs the exact package versions from renv.lock
 
 --------
 
-🚀 How to Run
+### 🚀 How to Run
 
 Clone or download this repo.
 
@@ -86,8 +86,8 @@ All figures and text outputs will be saved to the /figures folder.
 ---
 
 
-📊 Methods Overview
-1. Exploratory Data Analysis
+### 📊 Methods Overview
+#### 1. Exploratory Data Analysis
 
 Correlations & summary statistics
 
@@ -95,7 +95,7 @@ Scatterplots: Efficiency vs Price, Top Speed vs Price
 
 Boxplots of Battery and all numeric variables
 
-2. Regression Models
+#### 2. Regression Models
 
 Model 1: Price vs all numeric predictors
 
@@ -103,7 +103,7 @@ Model 2: Price vs predictors excluding Range (to reduce collinearity)
 
 Brand model: Price ~ Brand (ANOVA-style)
 
-3. Brand-Level Insights
+#### 3. Brand-Level Insights
 
 Extracted Brand from Car_name
 
@@ -113,7 +113,7 @@ Identified Top 10 most expensive EV brands
 
 Visualized using both base R and ggplot2
 
-4. Correlation & Clustering
+#### 4. Correlation & Clustering
 
 Heatmaps with ggcorrplot and ggplot2
 
@@ -123,7 +123,7 @@ k-means clustering with k=2, k=3
 
 Cluster membership tables and dendrograms
 
-📈 Key Findings
+### 📈 Key Findings
 
 Efficiency and Top Speed are the strongest predictors of price.
 
@@ -136,7 +136,7 @@ Range and Battery are highly correlated (r ≈ 0.88).
 Clustering reveals clear groupings of EVs by efficiency and performance.
 
 ----------------------------------
-#### 📊 Dataset
+### 📊 Dataset
 
 \- \*\*Observations:\*\* 360  
 
@@ -164,7 +164,7 @@ Clustering reveals clear groupings of EVs by efficiency and performance.
 
 ---
 
-📂 Outputs
+### 📂 Outputs
 
 The following are saved automatically in /figures:
 
@@ -200,45 +200,26 @@ plus CSV/TXT outputs: correlation matrices, model summaries, brand counts, clust
 
 
 
-#### 📚 References
+### 📚 References
 
 Fatih Ilhan. Electric Vehicle Specifications and Prices (Kaggle Dataset). Nov 2023.
 
-
-
 International Energy Agency (IEA). Demand for Electric Cars is Booming. 2023.
-
-
 
 Union of Concerned Scientists (UCS). What are Electric Cars? 2015.
 
-
-
 Amanda Sloat. Germany’s Green Party and EV Policy. Brookings Institution, 2020.
-
-
 
 U.S. Energy Information Administration (EIA). Germany Energy Analysis. 2020
 
-ISM6423 Final Paper
 
-
-
-.
-
-
-
-#### ✍️ Authors
-
-Team Data Detectives
-
+### ✍️ Authors
 Kirsten Hugh • Swetha Chukka • Samantha Snyder • Joshua Ippolitov • Sarah Alikhan
 
 ----
 
-📜 License
+### 📜 License
 
 This project is released under the MIT License.
-See LICENSE
- for details.
+See LICENSE for details.
 
