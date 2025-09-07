@@ -31,21 +31,111 @@ This repository contains code and analysis for our \*\*ISM6423 Data Analytics \&
 #### 📂 Project Structure
 
 ├─ data/
+│ └─ EV_cars.csv # Dataset (must be placed here)
+├─ figures/ # Auto-generated plots and outputs
+├─ R/
+│ ├─ ev_analysis.R # Regression models, brand-level analysis, plots
+│ └─ ev_plots_clustering.R # Correlation heatmaps, clustering analysis
+├─ README.md # Project documentation
+├─ .gitignore
+└─ LICENSE
 
-│ └─ EV\_cars.csv # EV dataset from Kaggle
+---
 
-├─ figures/ # Auto-generated plots and charts
+## 🔧 Setup
 
-├─ ev\_analysis.R # Main analysis script
+### Requirements
+- **R version**: 4.1 or higher
+- **Required packages**:
+  - pacman  
+  - here  
+  - dplyr  
+  - ggplot2  
+  - ggcorrplot  
+  - reshape2  
+  - tidyr  
 
-├─ ISM6423 Final Paper.pdf # Full written report
+### Install Packages (Simple Option)
+Run this once in R:
 
-└─ README.md # This file
+install.packages(c("pacman", "here", "dplyr", "ggplot2", "ggcorrplot", "reshape2", "tidyr"))
+
+For exact package versions, use {renv}:
+
+install.packages("renv")
+renv::restore()   # installs the exact package versions from renv.lock
+
+--------
+
+🚀 How to Run
+
+Clone or download this repo.
+
+Place the dataset file EV_cars.csv inside the /data folder.
+
+Run the analysis scripts in R:
+
+# Run regression analysis and brand-level plots
+source("R/ev_analysis.R")
+
+# Run correlation heatmaps and clustering analysis
+source("R/ev_plots_clustering.R")
+
+All figures and text outputs will be saved to the /figures folder.
 
 ---
 
 
+📊 Methods Overview
+1. Exploratory Data Analysis
 
+Correlations & summary statistics
+
+Scatterplots: Efficiency vs Price, Top Speed vs Price
+
+Boxplots of Battery and all numeric variables
+
+2. Regression Models
+
+Model 1: Price vs all numeric predictors
+
+Model 2: Price vs predictors excluding Range (to reduce collinearity)
+
+Brand model: Price ~ Brand (ANOVA-style)
+
+3. Brand-Level Insights
+
+Extracted Brand from Car_name
+
+Calculated Average_Price per brand
+
+Identified Top 10 most expensive EV brands
+
+Visualized using both base R and ggplot2
+
+4. Correlation & Clustering
+
+Heatmaps with ggcorrplot and ggplot2
+
+Hierarchical clustering (Complete linkage)
+
+k-means clustering with k=2, k=3
+
+Cluster membership tables and dendrograms
+
+📈 Key Findings
+
+Efficiency and Top Speed are the strongest predictors of price.
+
+Battery capacity and Fast charging time also significant at 0.01–0.05 levels.
+
+Brand mediates pricing: Porsche, Lucid, and Lotus command the highest price premiums.
+
+Range and Battery are highly correlated (r ≈ 0.88).
+
+Clustering reveals clear groupings of EVs by efficiency and performance.
+
+----------------------------------
 #### 📊 Dataset
 
 \- \*\*Observations:\*\* 360  
@@ -74,121 +164,39 @@ This repository contains code and analysis for our \*\*ISM6423 Data Analytics \&
 
 ---
 
+📂 Outputs
 
+The following are saved automatically in /figures:
 
-#### ⚙️ Methods
+scatter_efficiency_price.png
 
-The analysis was conducted in \*\*R\*\* using packages such as `ggplot2`, `dplyr`, `ggcorrplot`, and `reshape2`.
+scatter_topspeed_price.png
 
+boxplot_battery.png
 
+boxplot_all_numeric.png
 
-##### 1\. \*\*Exploratory Data Analysis (EDA)\*\*
+bar_top10_brands_base.png
 
-\- Summary statistics for all numeric variables  
+bar_top10_brands_ggplot.png
 
-\- Correlation matrix \& heatmaps  
+corr_heatmap_full.png
 
-\- Scatterplots:
+corr_heatmap_masked_0_5.png
 
-&nbsp; - Efficiency vs. Price
+corr_heatmap_ggplot.png
 
-&nbsp; - Top Speed vs. Price  
+corr_heatmap_ggplot_labeled.png
 
-\- Boxplots for distribution checks  
+hc_complete_dendrogram.png
 
+kmeans_k2_projection.png
 
+kmeans_k3_projection.png
 
-##### 2\. \*\*Regression Models\*\*
+plus CSV/TXT outputs: correlation matrices, model summaries, brand counts, cluster memberships
 
-\- \*\*Model 1:\*\* Price vs. all numeric predictors  
-
-\- \*\*Model 2:\*\* Price vs. numeric predictors (excluding Range to reduce multicollinearity)  
-
-\- \*\*Brand Impact Model:\*\* Price ~ Brand (ANOVA-style)  
-
-
-
-##### 3\. \*\*Brand-Level Analysis\*\*
-
-\- Created a `Brand` variable from car names  
-
-\- Calculated `Average\_Price` per brand  
-
-\- Ranked and visualized the \*\*Top 10 most expensive EV brands\*\*  
-
-
-
-##### 4\. \*\*Clustering\*\*
-
-\- Hierarchical clustering (Complete linkage)  
-
-\- k-means clustering with 2–3 clusters  
-
-\- Dendrograms and projection plots  
-
-
-
----
-
-
-
-#### 📈 Key Findings
-
-\- \*\*Efficiency\*\* and \*\*Top Speed\*\* were the most statistically significant predictors of EV price (p < 0.001).  
-
-\- \*\*Battery capacity\*\* and \*\*Fast charging time\*\* were also significant predictors at the 0.01–0.05 levels.  
-
-\- \*\*Brand acts as a mediator\*\*: Porsche, Lucid, and Lotus had the strongest premium impact, followed by BMW and Mercedes:contentReference\[oaicite:0]{index=0}.  
-
-\- Correlation analysis showed:
-
-&nbsp; - Range and Battery were highly correlated (0.88), so Range was removed in regression.  
-
-&nbsp; - Acceleration had a negative relationship with most variables.  
-
-\- Cluster analysis grouped EVs into \*\*4 main clusters\*\*, reinforcing the role of efficiency and top speed in price differentiation.  
-
-
-
----
-
-
-
-#### 📂 Outputs
-
-Figures generated include:
-
-\- Scatterplots (Efficiency vs. Price, Top Speed vs. Price)  
-
-\- Correlation heatmaps (base R + `ggcorrplot`)  
-
-\- Boxplots of numeric variables  
-
-\- Bar chart of Top 10 EV brands by price  
-
-\- Dendrograms and k-means cluster visualizations  
-
-
-
----
-
-
-
-#### 🚀 How to Run
-
-1\. Place `EV\_cars.csv` in the `/data` folder.  
-
-2\. Run the analysis script in R:
-
-&nbsp;  ```r
-
-&nbsp;  source("ev\_analysis.R")
-
-Outputs (plots \& figures) will be saved in the /figures folder.
-
-
-
-Model results will print in the R console.
+-----
 
 
 
@@ -226,5 +234,11 @@ Team Data Detectives
 
 Kirsten Hugh • Swetha Chukka • Samantha Snyder • Joshua Ippolitov • Sarah Alikhan
 
+----
 
+📜 License
+
+This project is released under the MIT License.
+See LICENSE
+ for details.
 
