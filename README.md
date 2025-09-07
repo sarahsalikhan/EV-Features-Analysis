@@ -75,10 +75,10 @@ Place the dataset file EV_cars.csv inside the /data folder.
 
 Run the analysis scripts in R:
 
-# Run regression analysis and brand-level plots
+### Run regression analysis and brand-level plots
 source("R/ev_analysis.R")
 
-# Run correlation heatmaps and clustering analysis
+### Run correlation heatmaps and clustering analysis
 source("R/ev_plots_clustering.R")
 
 All figures and text outputs will be saved to the /figures folder.
